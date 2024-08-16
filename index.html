@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="todo-app">
+    <h1>Расширенный To-Do List</h1>
+    <div class="todo-controls">
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Введите задачу" required>
+        <button type="submit">Добавить</button>
+      </form>
+      <div class="todo-filters">
+        <button data-filter="all" class="filter-btn active">Все</button>
+        <button data-filter="completed" class="filter-btn">Выполненные</button>
+        <button data-filter="uncompleted" class="filter-btn">Невыполненные</button>
+      </div>
+      <input type="text" id="search-input" placeholder="Поиск задач...">
+    </div>
+    <div id="categories">
+      <h3>Категории</h3>
+      <form id="category-form">
+        <input type="text" id="category-input" placeholder="Добавить категорию" required>
+        <button type="submit">Создать</button>
+      </form>
+      <ul id="category-list"></ul>
+    </div>
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

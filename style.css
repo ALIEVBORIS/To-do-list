@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.todo-app {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 500px;
+  max-width: 90%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.todo-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#todo-form,
+#category-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+#todo-input,
+#category-input,
+#search-input {
+  flex: 1;
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#todo-list,
+#category-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #7f8c8d;
+}
+
+li button {
+  background-color: #e74c3c;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+li button:hover {
+  background-color: #c0392b;
+}
+
+.todo-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.filter-btn {
+  flex: 1;
+  margin-left: 10px;
+  background-color: #2ecc71;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.filter-btn:hover {
+  background-color: #27ae60;
+}
+
+.filter-btn.active {
+  background-color: #1abc9c;
+}
+
+@media (max-width: 600px) {
+  .todo-app {
+    padding: 20px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #todo-input,
+  #category-input,
+  #search-input {
+    font-size: 16px;
+  }
+
+  .filter-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
